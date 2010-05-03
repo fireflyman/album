@@ -1919,3 +1919,512 @@ Rendering photos/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
 Completed in 281ms (View: 187, DB: 32) | 200 OK [http://localhost/photos]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-03 18:37:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (312.0ms)
+Completed in 641ms (View: 625, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-03 18:37:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint.css" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-03 18:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:37:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 922ms (View: 719, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-05-03 18:37:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (360.0ms)
+Completed in 578ms (View: 500, DB: 0) | 200 OK [http://localhost/photos/1/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-05-03 18:37:56) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "delete_image"=>"1", "user_id"=>"1"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "id"=>"1", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (109.0ms)
+Completed in 266ms (View: 141, DB: 0) | 200 OK [http://localhost/photos/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-03 18:38:15) [GET]
+
+ActionController::RoutingError (No route matches "/catalog/rss" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-05-03 18:38:18) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.1>}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "id"=>"1", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE "photos" SET "image_content_type" = 'image/jpeg', "image_file_name" = 'no.jpg', "image_file_size" = 105919, "image_updated_at" = '2010-05-03 10:38:18', "updated_at" = '2010-05-03 10:38:21' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+[paperclip] deleting C:/work/album/public/system/images/1/original/dd.gif
+[paperclip] deleting C:/work/album/public/system/images/1/gallery/dd.gif
+[paperclip] deleting C:/work/album/public/system/images/1/avatar/dd.gif
+[paperclip] deleting C:/work/album/public/system/images/1/thumb/dd.gif
+[paperclip] saving C:/work/album/public/system/images/1/original/no.jpg
+[paperclip] saving C:/work/album/public/system/images/1/gallery/no.jpg
+[paperclip] saving C:/work/album/public/system/images/1/avatar/no.jpg
+[paperclip] saving C:/work/album/public/system/images/1/thumb/no.jpg
+Redirected to http://localhost:3000/photos/1
+Completed in 3375ms (DB: 0) | 302 Found [http://localhost/photos/1]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-05-03 18:38:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"photos"}
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 172ms (View: 94, DB: 15) | 200 OK [http://localhost/photos/1]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:38:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 313ms (View: 250, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-05-03 18:38:34) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"photos"}
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (109.0ms)
+Completed in 359ms (View: 109, DB: 16) | 200 OK [http://localhost/photos/1/edit]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:39:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 297ms (View: 219, DB: 15) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-05-03 18:39:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 219ms (View: 141, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-05-03 18:39:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (110.0ms)
+Completed in 188ms (View: 110, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:39:59) [POST]
+  Parameters: {"photo"=>{"image_url"=>"http://images.google.com.hk/imglanding?q=%E6%9D%A8%E7%AB%A5%E8%88%92&imgurl=http://www.lady11.com/uploads/allimg/090502/19311M0G-0.jpg&imgrefurl=http://www.lady11.com/html/richanghufu/mianmo/2009/0502/22.html&usg=__d4UHEdIl1cPmA6TC5Z5zqi7zC7s=&h=412&w=300&sz=25&hl=zh-CN&sig2=dhULaGKHFfJzsW1F76UwGw&itbs=1&tbnid=f28sYPjN_wJVwM:&tbnh=125&tbnw=91&prev=/images%3Fq%3D%25E6%259D%25A8%25E7%25AB%25A5%25E8%2588%2592%26hl%3Dzh-CN%26newwindow%3D1%26safe%3Dstrict%26sa%3DG%26tbs%3Disch:1&ei=6afeS-unKYyC7QOuzrimBg&newwindow=1&safe=strict&sa=G&tbs=isch:1&start=0#tbnid=f28sYPjN_wJVwM&start=1", "is_avatar"=>"0", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,0 is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,0 is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,0 is not recognized by the 'identify' command.>
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (110.0ms)
+Completed in 1672ms (View: 125, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:42:01) [POST]
+  Parameters: {"photo"=>{"image_url"=>"http://www.douban.com/photos/photo/229853102/#next_photo", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,1 is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,1 is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,1 is not recognized by the 'identify' command.>
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 1485ms (View: 94, DB: 16) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:42:14) [POST]
+  Parameters: {"photo"=>{"image_url"=>"http://www.douban.com/photos/photo/229853102/#next_photo", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.2>}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,2 is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,2 is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,2 is not recognized by the 'identify' command.>
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 3578ms (View: 109, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:42:28) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.3>}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+  [4;35;1mPhoto Create (0.0ms)[0m   [0mINSERT INTO "photos" ("image_file_size", "updated_at", "image_content_type", "image_remote_url", "is_avatar", "user_id", "image_updated_at", "created_at", "image_file_name") VALUES(58417, '2010-05-03 10:42:30', 'image/jpeg', NULL, NULL, 1, '2010-05-03 10:42:28', '2010-05-03 10:42:30', 'onepiece.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/work/album/public/system/images/6/original/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/gallery/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/avatar/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/thumb/onepiece.jpg
+Redirected to http://localhost:3000/photos/6
+Completed in 2390ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-05-03 18:42:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 172ms (View: 94, DB: 16) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:42:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 312ms (View: 250, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-05-03 18:44:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 187ms (View: 109, DB: 16) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:44:59) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:\\work\\blueprint\\tests\\parts", "is_avatar"=>"1", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (406.0ms)
+Completed in 688ms (View: 438, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:45:39) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:\\work\\blueprint\\tests\\parts\\test.jpg", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 203ms (View: 109, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:45:41) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:\\work\\blueprint\\tests\\parts\\test.jpg", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (110.0ms)
+Completed in 204ms (View: 110, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:46:07) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:\\work\\blueprint\\tests\\parts\\test.jpg", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (109.0ms)
+Completed in 203ms (View: 109, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:46:32) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:\\work\\blueprint\\tests\\parts\\test.jpg", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.4>}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (313.0ms)
+Completed in 2251ms (View: 313, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:46:54) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.0>}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,0.zip is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,0.zip is not recognized by the 'identify' command.>
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/stream,1772,0.zip is not recognized by the 'identify' command.>
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 1172ms (View: 110, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:48:14) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:/work/blueprint/tests/parts/test.jpg", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (110.0ms)
+Completed in 204ms (View: 110, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-05-03 18:48:30) [POST]
+  Parameters: {"photo"=>{"image_url"=>"C:/work/blueprint/tests/parts/test.jpg", "user_id"=>"1"}, "action"=>"create", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "controller"=>"photos"}
+Rendering template within layouts/photos
+Rendering photos/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (93.0ms)
+Completed in 219ms (View: 125, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:52:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 281ms (View: 203, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-05-03 18:52:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (125.0ms)
+Completed in 218ms (View: 125, DB: 0) | 200 OK [http://localhost/photos/4/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-05-03 18:52:48) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "delete_image"=>"0", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.0>}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE "photos" SET "image_file_name" = '_.jpg', "image_file_size" = 17972, "image_updated_at" = '2010-05-03 10:52:48', "updated_at" = '2010-05-03 10:52:50' WHERE "id" = 4[0m
+[paperclip] Saving attachments.
+[paperclip] deleting C:/work/album/public/system/images/4/original/Why_JE.jpg
+[paperclip] deleting C:/work/album/public/system/images/4/gallery/Why_JE.jpg
+[paperclip] deleting C:/work/album/public/system/images/4/avatar/Why_JE.jpg
+[paperclip] deleting C:/work/album/public/system/images/4/thumb/Why_JE.jpg
+[paperclip] saving C:/work/album/public/system/images/4/original/_.jpg
+[paperclip] saving C:/work/album/public/system/images/4/gallery/_.jpg
+[paperclip] saving C:/work/album/public/system/images/4/avatar/_.jpg
+[paperclip] saving C:/work/album/public/system/images/4/thumb/_.jpg
+Redirected to http://localhost:3000/photos/4
+Completed in 2172ms (DB: 0) | 302 Found [http://localhost/photos/4]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-05-03 18:52:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 172ms (View: 110, DB: 0) | 200 OK [http://localhost/photos/4]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:52:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 312ms (View: 250, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-05-03 18:53:21) [GET]
+  Parameters: {"action"=>"edit", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (313.0ms)
+Completed in 422ms (View: 328, DB: 0) | 200 OK [http://localhost/photos/6/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-05-03 18:53:24) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "delete_image"=>"1", "user_id"=>"1"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered photos/_form (94.0ms)
+Completed in 234ms (View: 125, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-05-03 18:53:31) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "user_id"=>"1", "image"=>#<File:C:/DOCUME~1/YANGXI~1/LOCALS~1/Temp/RackMultipart.1772.2>}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE "photos" SET "image_updated_at" = '2010-05-03 10:53:31', "updated_at" = '2010-05-03 10:53:33' WHERE "id" = 6[0m
+[paperclip] Saving attachments.
+[paperclip] deleting C:/work/album/public/system/images/6/original/onepiece.jpg
+[paperclip] deleting C:/work/album/public/system/images/6/gallery/onepiece.jpg
+[paperclip] deleting C:/work/album/public/system/images/6/avatar/onepiece.jpg
+[paperclip] deleting C:/work/album/public/system/images/6/thumb/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/original/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/gallery/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/avatar/onepiece.jpg
+[paperclip] saving C:/work/album/public/system/images/6/thumb/onepiece.jpg
+Redirected to http://localhost:3000/photos/6
+Completed in 2312ms (DB: 0) | 302 Found [http://localhost/photos/6]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-05-03 18:53:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 172ms (View: 93, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:53:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 656ms (View: 578, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-05-03 18:53:42) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"L7l6/pCtZY4mMi6UGPhDeGFQ3qV11Khlc/xJYfVtF+w=", "id"=>"1", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting C:/work/album/public/system/images/1/original/no.jpg
+[paperclip] deleting C:/work/album/public/system/images/1/gallery/no.jpg
+[paperclip] deleting C:/work/album/public/system/images/1/avatar/no.jpg
+[paperclip] deleting C:/work/album/public/system/images/1/thumb/no.jpg
+  [4;36;1mPhoto Destroy (0.0ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/photos
+Completed in 219ms (DB: 0) | 302 Found [http://localhost/photos/1]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:53:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 328ms (View: 250, DB: 16) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:55:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (16.0ms)
+Completed in 297ms (View: 219, DB: 16) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-05-03 18:55:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (16.0ms)
+Completed in 266ms (View: 172, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-05-03 18:55:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (15.0ms)
+Completed in 312ms (View: 250, DB: 0) | 200 OK [http://localhost/photos]

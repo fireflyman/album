@@ -59,7 +59,7 @@ class PhotosController < ApplicationController
   def update
   @photo = Photo.find(params[:id])
   if @photo.update_attributes(params[:photo])
-    message = @photo.delete_image?? "删除图片成功！" : "更新图片成功！"
+    message = @photo.delete_image? ? "删除图片成功！" : "更新图片成功！"
     flash[:notice] = message
     redirect_to(@photo)
   else

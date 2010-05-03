@@ -18,6 +18,20 @@ class Photo < ActiveRecord::Base
  
   validates_presence_of :image_remote_url, :if => :image_url_provided?, :message => '地址不合法'
  
+  def delete_image=(value)
+    @delete_image = !value.to_i.zero?
+  end
+ 
+  def delete_image
+    !!@delete_image
+  end
+  alias_method :delete_image?, :delete_image
+  before_validation :clear_image
+  
+  def clear_image
+    self.image = nil if delete_image? && !image.dirty?
+  end
+ 
   private
   def image_url_provided?
     !self.image_url.blank?
@@ -38,19 +52,6 @@ class Photo < ActiveRecord::Base
    #============================= 其他代码=====================
   #============================= 删除图片=====================
 
-  def delete_image=(value)
-    @delete_image = !value.to_i.zero?
-  end
- 
-  def delete_image
-    !!@delete_image
-  end
-  alias_method :delete_image?, :delete_image
-  before_validation :clear_image
-  
-  def clear_image
-    self.image = nil if delete_image? && !image.dirty?
-  end
 #===============================其他代码===================
 
 end
